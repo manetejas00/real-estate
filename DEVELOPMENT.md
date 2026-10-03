@@ -36,7 +36,7 @@ src/                              React application shell
 src/components/                   Reusable React components
 public/landing-pages/             Static page source and image assets
 public/landing-pages/meng-to-sketchbook.html
-                                  Interactive Skyline Residency page
+                                  Interactive AVC Reality page
 public/landing-pages/meng-to-sketchbook/
                                   Fonts, masks, decorative art, and project plates
 dist/                             Generated production output — do not edit manually

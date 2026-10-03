@@ -26,7 +26,7 @@ const localSource = () => typeof window !== 'undefined' && window.location.proto
 
 /** A reusable React frame preserving the original page turns, loupe, and responsive behavior. */
 export function MengToSketchbookLandingPage({
-  title = 'Skyline Residency — Virar West', sourceUrl = localSource(), primaryColor = '#2b2721',
+  title = 'AVC Reality | Premium Real Estate Advisory', sourceUrl = localSource(), primaryColor = '#2b2721',
   headingFont = 'Instrument Serif', bodyFont = 'Newsreader', headingWeight = '400', bodyWeight = '400',
   headingSize = 30, bodySize = 20, headingLetterSpacing = 0.01, className, style, onPageLoad, ...iframeProps
 }: MengToSketchbookLandingPageProps) {

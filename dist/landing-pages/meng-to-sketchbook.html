@@ -3,8 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Skyline Residency — Virar West</title>
-<meta name="description" content="Premium homes under construction in Virar West, Mumbai.">
+<title>AVC Reality | Premium Real Estate Advisory</title>
+<meta name="description" content="AVC Reality is a premium real-estate advisory and brokerage for residential, commercial and investment opportunities.">
+<meta property="og:title" content="AVC Reality | Premium Real Estate Advisory">
+<meta property="og:description" content="Explore curated residential, commercial and investment property opportunities with AVC Reality.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"RealEstateAgent","name":"AVC Reality","description":"Premium real-estate brokerage and property advisory for residential, commercial and investment opportunities."}</script>
 <style>
 @font-face{font-family:'Instrument Serif';font-style:normal;font-weight:400;font-display:block;
   src:url(meng-to-sketchbook/instrument-serif.woff2) format('woff2')}
@@ -436,6 +440,28 @@ button{font:inherit}
 
 .foot{font-size:11.5px;letter-spacing:var(--track-caps);text-transform:uppercase;
   color:var(--ink-faint);text-align:center;padding-bottom:44px}
+
+/* ---------------- advisory content ---------------- */
+.advisory-section{max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+.advisory-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,34px)}
+.advisory-card{padding:4px 0 18px;border-bottom:1px solid var(--hairline)}
+.advisory-card h3{font-family:var(--display);font-size:clamp(22px,2.2vw,29px);font-weight:400;margin:0 0 8px}
+.advisory-card p,.process-step p,.contact-note{font-size:16px;line-height:1.58;font-weight:300;margin:0;color:var(--ink-soft)}
+.process{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--hairline)}
+.process-step{padding:20px 18px 22px 0;border-bottom:1px solid var(--hairline)}
+.process-step:nth-child(3n+2),.process-step:nth-child(3n+3){padding-left:18px}
+.process-step .num{display:block;font-size:11px;letter-spacing:var(--track-caps);color:var(--earth);margin-bottom:10px}
+.process-step h3{font-family:var(--display);font-size:22px;font-weight:400;margin:0 0 7px}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.72fr);gap:clamp(28px,6vw,72px);align-items:start}
+.enquiry-form{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.enquiry-form .wide{grid-column:1/-1}
+.enquiry-form label{display:grid;gap:6px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+.enquiry-form input,.enquiry-form select,.enquiry-form textarea{width:100%;border:1px solid var(--hairline);border-radius:0;background:rgba(255,252,244,.42);padding:11px 12px;color:var(--ink);font:300 16px var(--font)}
+.enquiry-form textarea{min-height:96px;resize:vertical}
+.enquiry-form button{justify-self:start;border:1px solid var(--ink);background:var(--ink);color:var(--paper);padding:12px 18px;cursor:pointer;font:400 12px var(--font);letter-spacing:.12em;text-transform:uppercase}
+.consent{grid-column:1/-1;font-size:12px!important;line-height:1.5;letter-spacing:0!important;text-transform:none!important;color:var(--ink-soft)!important}
+.form-response{grid-column:1/-1;margin:0;font-size:14px;color:var(--earth)}
+@media(max-width:760px){.advisory-grid,.process,.contact-grid{grid-template-columns:1fr}.process-step,.process-step:nth-child(3n+2),.process-step:nth-child(3n+3){padding-left:0}.enquiry-form{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -443,16 +469,16 @@ button{font:inherit}
 <main class="page home">
 
   <header class="top">
-    <a class="name" href="#">Skyline Residency</a>
+    <a class="name" href="#">AVC Reality</a>
     <nav>
-      <a href="#plates">Project Details</a>
-      <a href="#about">About</a>
-      <a href="#contact">Schedule a Site Visit</a>
+      <a href="#plates">Properties</a>
+      <a href="#advisory">Our Advisory</a>
+      <a href="#contact">Book a Consultation</a>
       <div class="top-socials">
-        <a href="tel:+919876543210" class="icon-btn" aria-label="Call Now"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.7 2.6h3.3l-7.2 8.2 8.5 11.2h-6.7l-5.2-6.9-6 6.9H1.1l7.7-8.8L.7 2.6h6.9l4.7 6.3 5.4-6.3Zm-1.2 17.5h1.8L7.6 4.4H5.7l10.8 15.7Z"/></svg></a>
+        <a href="#contact" class="icon-btn" aria-label="Request a callback"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.7 2.6h3.3l-7.2 8.2 8.5 11.2h-6.7l-5.2-6.9-6 6.9H1.1l7.7-8.8L.7 2.6h6.9l4.7 6.3 5.4-6.3Zm-1.2 17.5h1.8L7.6 4.4H5.7l10.8 15.7Z"/></svg></a>
         <a href="#" class="icon-btn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.9 3.5a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2ZM3.1 9.3h3.6v11.6H3.1V9.3Zm6 0h3.4v1.6h.05c.48-.9 1.65-1.85 3.4-1.85 3.63 0 4.3 2.35 4.3 5.4v6.45h-3.6v-5.72c0-1.36-.02-3.12-1.92-3.12-1.92 0-2.22 1.48-2.22 3.02v5.82H9.1V9.3Z"/></svg></a>
         <a href="#" class="icon-btn" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5.4"/><circle cx="12" cy="12" r="4.4"/><circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/></svg></a>
-        <a href="tel:+919876543210" class="icon-btn" aria-label="Call Now"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.4" y="4.6" width="19.2" height="14.8" rx="2.4"/><path d="m3.2 6.4 8.8 6.6 8.8-6.6"/></svg></a>
+        <a href="#contact" class="icon-btn" aria-label="Book a consultation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.4" y="4.6" width="19.2" height="14.8" rx="2.4"/><path d="m3.2 6.4 8.8 6.6 8.8-6.6"/></svg></a>
       </div>
     </nav>
   </header>
@@ -461,7 +487,7 @@ button{font:inherit}
     <img class="botany l" src="meng-to-sketchbook/botany-left.png" alt="" aria-hidden="true">
     <img class="botany r" src="meng-to-sketchbook/botany-right.png" alt="" aria-hidden="true">
 
-    <p class="hero-kicker">Premium Homes Under Construction in Virar · Mumbai</p>
+    <p class="hero-kicker">Exceptional Properties · Exceptional Opportunities</p>
 
     <div class="sb-wrap" id="sbWrap">
       <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -509,8 +535,8 @@ button{font:inherit}
 
   <section id="about" class="about">
     <div>
-      <p class="section-label">Skyline Residency, Virar West</p>
-      <p class="bio">Discover thoughtfully planned <a class="bio-link" href="#plates">1 BHK, 2 BHK, and 3 BHK homes</a> designed for contemporary Virar living. Skyline Residency brings together secure parking, lift access, 24/7 security, a gym, landscaped garden, and a children’s play area. Construction is in progress, with possession expected in December 2028. RERA No.: <a class="bio-link" href="#plates">P99000000000</a>. From ₹42.50 lakh onwards — a well-connected address near Virar Railway Station, schools, hospitals, markets, and Mumbai’s everyday conveniences.</p>
+      <p class="section-label">Your Trusted Partner in Premium Real Estate</p>
+      <p class="bio">AVC Reality helps homebuyers, investors and businesses discover carefully selected <a class="bio-link" href="#plates">residential and commercial opportunities</a>. From luxury residences and emerging developments to office spaces and investment-led searches, we bring clarity to property discovery, project comparison, site visits, commercial discussions and transaction coordination. Our role is advisory: to help you assess suitable options with care, market context and a client-first approach.</p>
     </div>
     <img class="bloom" src="meng-to-sketchbook/bloom.png" alt="" aria-hidden="true">
   </section>
@@ -518,17 +544,66 @@ button{font:inherit}
   <div class="rule short" aria-hidden="true"></div>
 
   <section id="plates" class="plates">
-    <p class="section-label">Project Details</p>
+    <p class="section-label">Explore Property Opportunities</p>
     <ol class="plate-list" id="plateList"></ol>
   </section>
 
   <div class="rule short" aria-hidden="true"></div>
-  <p class="foot" id="contact">Virar West · Mumbai · <a href="tel:+919876543210" class="bio-link">Call Now</a> · <a href="#sketchbook" class="bio-link">Schedule a Site Visit</a></p>
+
+  <section id="advisory" class="advisory-section">
+    <p class="section-label">Why AVC Reality</p>
+    <div class="advisory-grid">
+      <article class="advisory-card"><h3>Extensive Property Network</h3><p>Residential and commercial opportunities across multiple locations, developers and property formats.</p></article>
+      <article class="advisory-card"><h3>Personalized Advisory</h3><p>Recommendations shaped around your budget, location, lifestyle, business or investment objectives.</p></article>
+      <article class="advisory-card"><h3>Comparison & Coordination</h3><p>Clearer project comparisons, coordinated site visits and practical support through discussions and documentation.</p></article>
+    </div>
+  </section>
+
+  <div class="rule short" aria-hidden="true"></div>
+
+  <section class="advisory-section">
+    <p class="section-label">How It Works</p>
+    <div class="process">
+      <article class="process-step"><span class="num">01</span><h3>Tell Us What You Need</h3><p>Share your preferred location, budget, property type and timing.</p></article>
+      <article class="process-step"><span class="num">02</span><h3>Receive Curated Options</h3><p>Review relevant residential, commercial or investment opportunities.</p></article>
+      <article class="process-step"><span class="num">03</span><h3>Compare Projects</h3><p>Understand key differences in location, configuration and available project information.</p></article>
+      <article class="process-step"><span class="num">04</span><h3>Schedule Site Visits</h3><p>Visit shortlisted properties at times that work for you.</p></article>
+      <article class="process-step"><span class="num">05</span><h3>Discuss & Negotiate</h3><p>Get support during commercial discussions and negotiations.</p></article>
+      <article class="process-step"><span class="num">06</span><h3>Complete the Transaction</h3><p>Receive coordination assistance through the documentation process.</p></article>
+    </div>
+  </section>
+
+  <div class="rule short" aria-hidden="true"></div>
+
+  <section class="advisory-section">
+    <p class="section-label">Real Estate for Investors</p>
+    <div class="contact-grid"><p class="bio">For clients exploring property as an investment, AVC Reality can help frame decisions around location, connectivity, demand signals, property type, entry considerations and holding objectives. We do not promise appreciation or yields; we help you review opportunities with the context needed for an informed decision.</p><p class="contact-note">Speak with a property advisor to begin a focused residential, commercial or investment search.</p></div>
+  </section>
+
+  <div class="rule short" aria-hidden="true"></div>
+
+  <section id="contact" class="advisory-section">
+    <p class="section-label">Request Property Recommendations</p>
+    <div class="contact-grid"><div><p class="bio">Tell us what you are looking for. An AVC Reality advisor can use these details to prepare a more relevant shortlist and help coordinate your next steps.</p><p class="contact-note" style="margin-top:14px">Please do not share confidential financial information in this form.</p></div>
+      <form class="enquiry-form" id="enquiryForm">
+        <label>Name<input required name="name" autocomplete="name"></label><label>Phone<input required name="phone" type="tel" autocomplete="tel"></label>
+        <label>Email<input required name="email" type="email" autocomplete="email"></label><label>Property Type<select name="propertyType"><option>Residential</option><option>Commercial</option><option>Investment</option></select></label>
+        <label>Preferred Location<input name="location"></label><label>Budget Range<input name="budget" placeholder="Optional"></label>
+        <label>Configuration<input name="configuration" placeholder="Optional"></label><label>Buying Timeline<select name="timeline"><option>Exploring options</option><option>Within 3 months</option><option>Within 6 months</option><option>Later</option></select></label>
+        <label class="wide">Message<textarea name="message" placeholder="Tell us about your requirements"></textarea></label>
+        <label class="consent"><input required type="checkbox"> I consent to AVC Reality using these details to respond to my property enquiry.</label>
+        <button type="submit">Request Details</button><p class="form-response" id="formResponse" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <div class="rule short" aria-hidden="true"></div>
+  <p class="foot">AVC Reality · Premium Real Estate Advisory · <a href="#contact" class="bio-link">Book a Consultation</a></p>
 </main>
 
 <script>
 /* =====================================================================
-   Meng To — sketchbook hero.
+   AVC Reality — interactive property showcase.
    Spreads are transparent PNGs of an open sketchbook generated with
    Higgsfield.  The leaf that turns is a real curved surface: a chain of
    nested strips whose tangent sweeps through an arc, so the page bends
@@ -537,15 +612,15 @@ button{font:inherit}
 const Q=new URLSearchParams(location.search);
 const DIR='meng-to-sketchbook/';
 const PAGES=[
-  {file:'skyline-residency-hero.png', title:'Skyline Residency',       place:'Virar West'},
-  {file:'skyline-amenities.png',      title:'Gym, Garden & Lift Lobby', place:'Premium Amenities'},
-  {file:'skyline-play-garden.png',    title:'Children’s Play Area',     place:'Family Living'},
-  {file:'virar-connectivity.png',     title:'Virar Railway Station',    place:'Mumbai Connectivity'},
-  {file:'skyline-residency-hero.png', title:'1 BHK Homes',              place:'From ₹42.50 Lakh'},
-  {file:'skyline-amenities.png',      title:'2 BHK Homes',              place:'From ₹62.00 Lakh'},
-  {file:'skyline-play-garden.png',    title:'3 BHK Homes',              place:'From ₹88.00 Lakh'},
-  {file:'virar-connectivity.png',     title:'Construction Progress',    place:'Possession Dec 2028'},
-  {file:'skyline-residency-hero.png', title:'RERA Registered',          place:'P99000000000'}
+  {file:'avc-luxury-residences.png',  title:'Luxury Residences',          place:'Curated Opportunities'},
+  {file:'avc-premium-amenities.png',  title:'Premium Apartments',        place:'Details on Request'},
+  {file:'avc-family-living.png',      title:'New Launches',              place:'Emerging Developments'},
+  {file:'avc-urban-connectivity.png', title:'Ready-to-Move Homes',       place:'Selected Listings'},
+  {file:'avc-luxury-residences.png',  title:'Commercial Properties',     place:'Spaces for Business'},
+  {file:'avc-premium-amenities.png',  title:'Office & Retail Spaces',    place:'Commercial Advisory'},
+  {file:'avc-family-living.png',      title:'Investment Opportunities',  place:'Market-led Searches'},
+  {file:'avc-urban-connectivity.png', title:'Site Visit Assistance',     place:'By Appointment'},
+  {file:'avc-luxury-residences.png',  title:'Property Advisory',         place:'Speak With AVC Reality'}
 ];
 PAGES.forEach(p=>p.url=DIR+p.file);
 const M=PAGES.length, LAND=6;
@@ -1004,6 +1079,14 @@ function marks(){
   const cur=turn?turn.to:idx;
   plateList.querySelectorAll('.plate').forEach((b,i)=>b.setAttribute('aria-current',i===cur?'true':'false'));
 }
+
+const enquiryForm=document.getElementById('enquiryForm');
+const formResponse=document.getElementById('formResponse');
+enquiryForm?.addEventListener('submit',e=>{
+  e.preventDefault();
+  if(!enquiryForm.reportValidity())return;
+  formResponse.textContent='Thank you. Your enquiry is ready for a secure AVC Reality follow-up workflow.';
+});
 
 /* ---------------------------------------------------------- the riffle */
 let riffle=null,riffleAt=0,introOn=false;
