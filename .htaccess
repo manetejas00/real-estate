@@ -1,0 +1,8 @@
+DirectoryIndex dist/index.html
+
+RewriteEngine On
+
+# The production Vite build is committed under dist/ for Hostinger's
+# standard Git deployment, which serves the repository without running npm.
+RewriteRule ^assets/(.*)$ dist/assets/$1 [L]
+RewriteRule ^landing-pages/(.*)$ dist/landing-pages/$1 [L]
